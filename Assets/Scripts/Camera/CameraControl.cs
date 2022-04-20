@@ -5,7 +5,7 @@ public class CameraControl : MonoBehaviour
     public float m_DampTime = 0.2f;                 
     public float m_ScreenEdgeBuffer = 4f;           
     public float m_MinSize = 6.5f;                  
-    [HideInInspector] public Transform[] m_Targets; 
+   /* [HideInInspector]*/ public Transform[] m_Targets; 
 
 
     private Camera m_Camera;                        
@@ -79,6 +79,7 @@ public class CameraControl : MonoBehaviour
             Vector3 targetLocalPos = transform.InverseTransformPoint(m_Targets[i].position);
 
             Vector3 desiredPosToTarget = targetLocalPos - desiredLocalPos;
+
 
             size = Mathf.Max (size, Mathf.Abs (desiredPosToTarget.y));
 
